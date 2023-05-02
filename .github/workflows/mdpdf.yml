@@ -1,0 +1,18 @@
+name: MD to PDF Conversion
+
+on: push
+
+jobs:
+  Convert:
+    runs-on: ubuntu-latest
+    steps:
+
+    # This step is required
+    - name: Clone repo 
+      uses: actions/checkout@v3
+
+    # exports $FILE_PATH to $GITHUB_ENV for use in another step
+    - name: Generate PDF from Markdown Files
+      uses: purplebearddan/ghAction-md2pdf@v1
+      with:
+        pdf_file_name: 'result.pdf'
