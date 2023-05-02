@@ -24,7 +24,7 @@ jobs:
 
     - name: 上传输出文件到仓库
       run: |
-        git add result.pdf
+        git add out/result.pdf
         git commit -m "Automatically upload result.pdf"
         git push
 
