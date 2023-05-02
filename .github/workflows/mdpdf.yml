@@ -17,8 +17,14 @@ jobs:
       with:
         pdf_file_name: 'result.pdf'
         
-    - name: 上传输出文件
-      uses: actions/upload-artifact@v2
-      with:
-        name: result-pdf
-        path: ./result.pdf
+    - name: 配置 Git
+      run: |
+        git config --global user.name "iliiiiiili"
+        git config --global user.email "yangquechen@gmail.com"
+
+    - name: 上传输出文件到仓库
+      run: |
+        git add result.pdf
+        git commit -m "Automatically upload result.pdf"
+        git push
+
