@@ -21,4 +21,4 @@ jobs:
       uses: actions/upload-artifact@v2
       with:
         name: result-pdf
-        path: result.pdf
+        path: ./result.pdf
