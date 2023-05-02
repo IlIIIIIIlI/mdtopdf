@@ -16,3 +16,9 @@ jobs:
       uses: purplebearddan/ghAction-md2pdf@v1
       with:
         pdf_file_name: 'result.pdf'
+        
+    - name: 上传输出文件
+      uses: actions/upload-artifact@v2
+      with:
+        name: result-pdf
+        path: result.pdf
